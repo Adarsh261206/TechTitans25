@@ -1,9 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+
+// Context Providers
 import { AuthProvider } from './contexts/AuthContext';
 import { SocketProvider } from './contexts/SocketContext';
-import Navbar from './components/Layout/Navbar';
+
+// Components
+import Navbar from './components/Navbar';
+
+// Pages
 import HomePage from './pages/HomePage';
 import QuestionPage from './pages/QuestionPage';
 import AskQuestionPage from './pages/AskQuestionPage';
@@ -11,15 +17,18 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ProfilePage from './pages/ProfilePage';
 import NotFoundPage from './pages/NotFoundPage';
+
+// Styles
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <AuthProvider>
       <SocketProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen bg-black">
             <Navbar />
+
             <main className="container mx-auto px-4 py-8">
               <Routes>
                 <Route path="/" element={<HomePage />} />
@@ -31,6 +40,7 @@ function App() {
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </main>
+
             <Toaster
               position="top-right"
               toastOptions={{
@@ -56,6 +66,6 @@ function App() {
       </SocketProvider>
     </AuthProvider>
   );
-}
+};
 
 export default App;

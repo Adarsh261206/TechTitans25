@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../contexts/AuthContext';
 
 const Navbar = () => {
   const { token, setToken } = useAuth();
@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
+    <nav className="bg-black text-white p-4 flex justify-between items-center">
       <Link to="/" className="font-bold text-xl">StackIt</Link>
       <div className="space-x-4">
         <Link to="/ask">Ask</Link>

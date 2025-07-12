@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap');
 
 /* Custom styles */
@@ -37,8 +38,9 @@
   }
   
   .input {
-    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm;
+  @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm;
   }
+ 
   
   .textarea {
     @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm;
@@ -117,7 +119,7 @@
 
 /* Animation classes */
 .fade-in {
-  @apply animate-fade-in;
+  @apply animate-fadeIn;
 }
 
 .slide-in {
