@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap');
+
+/* Custom styles */
+@layer base {
+  body {
+    @apply font-sans bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-500;
+  }
+  
+  .btn-outline {
+    @apply btn border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-primary-500;
+  }
+  
+  .btn-success {
+    @apply btn bg-success-600 text-white hover:bg-success-700 focus:ring-success-500;
+  }
+  
+  .btn-error {
+    @apply btn bg-error-600 text-white hover:bg-error-700 focus:ring-error-500;
+  }
+  
+  .input {
+    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm;
+  }
+  
+  .textarea {
+    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-card p-6;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-card-hover transition-shadow duration-200;
+  }
+  
+  .tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .tag-primary {
+    @apply tag bg-primary-100 text-primary-800;
+  }
+  
+  .tag-secondary {
+    @apply tag bg-secondary-100 text-secondary-800;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .badge-success {
+    @apply badge bg-success-100 text-success-800;
+  }
+  
+  .badge-warning {
+    @apply badge bg-warning-100 text-warning-800;
+  }
+  
+  .badge-error {
+    @apply badge bg-error-100 text-error-800;
+  }
+  
+  .skeleton {
+    @apply bg-gray-200 rounded animate-pulse;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin h-5 w-5 border-2 border-gray-300 border-t-primary-600 rounded-full;
+  }
+}
+
+/* Quill editor styles */
+.ql-editor {
+  @apply min-h-[200px] text-sm;
+}
+
+.ql-toolbar {
+  @apply border-gray-300 rounded-t-md;
+}
+
+.ql-container {
+  @apply border-gray-300 rounded-b-md;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}
+
+/* Animation classes */
+.fade-in {
+  @apply animate-fade-in;
+}
+
+.slide-in {
+  @apply animate-slide-in;
+}
+
+.bounce-subtle {
+  @apply animate-bounce-subtle;
+}
+
+.pulse-subtle {
+  @apply animate-pulse-subtle;
+}
+
+/* Vote buttons */
+.vote-btn {
+  @apply flex items-center justify-center w-8 h-8 rounded-full transition-colors duration-200 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-primary-500;
+}
+
+.vote-btn.voted {
+  @apply bg-primary-100 text-primary-600 hover:bg-primary-200;
+}
+
+.vote-btn svg {
+  @apply w-5 h-5;
+}
+
+/* Notification styles */
+.notification-item {
+  @apply flex items-start p-3 hover:bg-gray-50 transition-colors duration-200;
+}
+
+.notification-item.unread {
+  @apply bg-primary-50 border-l-4 border-primary-500;
+}
+
+/* Question card styles */
+.question-card {
+  @apply bg-white rounded-lg shadow-card p-6 hover:shadow-card-hover transition-shadow duration-200 border border-gray-200;
+}
+
+.question-card:hover {
+  @apply border-gray-300;
+}
+
+/* Answer styles */
+.answer-card {
+  @apply bg-white rounded-lg shadow-card p-6 border border-gray-200;
+}
+
+.answer-card.accepted {
+  @apply bg-green-50 border-green-200;
+}
+
+/* Rich text content */
+.rich-text {
+  @apply prose prose-sm max-w-none;
+}
+
+.rich-text h1 {
+  @apply text-2xl font-bold mb-4;
+}
+
+.rich-text h2 {
+  @apply text-xl font-semibold mb-3;
+}
+
+.rich-text h3 {
+  @apply text-lg font-semibold mb-2;
+}
+
+.rich-text p {
+  @apply mb-4;
+}
+
+.rich-text ul {
+  @apply list-disc list-inside mb-4;
+}
+
+.rich-text ol {
+  @apply list-decimal list-inside mb-4;
+}
+
+.rich-text blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-700 mb-4;
+}
+
+.rich-text pre {
+  @apply bg-gray-100 rounded-md p-4 mb-4 overflow-x-auto;
+}
+
+.rich-text code {
+  @apply bg-gray-100 rounded px-2 py-1 text-sm font-mono;
+}
+
+.rich-text pre code {
+  @apply bg-transparent p-0;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .container {
+    @apply px-2;
+  }
+  
+  .card {
+    @apply p-4;
+  }
+  
+  .btn {
+    @apply px-3 py-1.5 text-xs;
+  }
+}
+
+/* Dark mode styles (for future implementation) */
+@media (prefers-color-scheme: dark) {
+  .dark-mode body {
+    @apply bg-gray-900 text-gray-100;
+  }
+  
+  .dark-mode .card {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .dark-mode .input {
+    @apply bg-gray-800 border-gray-700 text-gray-100;
+  }
+}
