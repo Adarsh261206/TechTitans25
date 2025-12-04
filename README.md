@@ -1,6 +1,6 @@
 Team Name :- TechTitans25
 
-Problem Statement :- StackIt – A Minimal Q&A Forum Platform
+Problem Statement :- StackIt –  A Minimal Q&A Forum Platform
 
 Team Member :- Adarsh Ramnarayan Sharma, Shubh Rajgopal Shukla, Shaikh Faizur Rehman 
 
